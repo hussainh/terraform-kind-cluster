@@ -7,3 +7,7 @@ variable "nginx_port" {
   type = number
   description = "NGINX container's external port number"
 }
+
+variable "secret_key" {
+  type = string
+}
