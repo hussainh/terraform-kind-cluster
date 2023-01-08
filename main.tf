@@ -1,5 +1,6 @@
 provider "docker" {}
 provider "random" {}
+provider "kind" {}
 
 resource "docker_image" "nginx" {
   name         = "nginx:mainline"
