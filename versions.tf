@@ -1,18 +1,23 @@
 terraform {
   required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "2.24.0"
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+      version = "2.16.1"
     }
 
-    random = {
-      source  = "hashicorp/random"
-      version = "3.1.0"
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.8.0"
     }
 
     kind = {
-      source = "unicell/kind"
-      version = "0.0.2-u2"
+      source = "kyma-incubator/kind"
+      version = "0.0.11"
+    }
+
+    null = {
+      source = "hashicorp/null"
+      version = "3.2.1"
     }
   }
 }
