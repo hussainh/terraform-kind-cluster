@@ -10,7 +10,7 @@ variable "kind_cluster_config_path" {
 
 variable "ingress_nginx_helm_version" {
   type = "string"
-  default = "2.0.5"
+  default = "4.4.2"
 }
 
 variable "ingress_nginx_namespace" {
