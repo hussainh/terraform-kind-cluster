@@ -28,7 +28,7 @@ resource "null_resource" "wait_for_ingress_nginx" {
   provisioner "local-exec" {
     command = <<EOF
         printf "\nWaiting for the nginx ingress controller...\n"
-        kubectl wait --namespace ${helm_release.ingress_nginx.namespace} \
+        kubectl wait --namespace ${helm_release.nginx_ingress.namespace} \
             --for=condition=ready pod \
             --selector=app.kubernetes.io/component=controller \
             --timeout=90s
